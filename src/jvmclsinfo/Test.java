@@ -1,4 +1,4 @@
-package durga.jvmclsinfo;
+package jvmclsinfo;
 
 import java.lang.reflect.*;
  

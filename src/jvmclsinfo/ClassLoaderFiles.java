@@ -1,4 +1,4 @@
-package durga.jvmclsinfo;
+package jvmclsinfo;
 
 public class ClassLoaderFiles {
 
