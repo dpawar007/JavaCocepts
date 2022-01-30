@@ -1,6 +1,6 @@
 package jdk8;
 
- 
+
 interface NormalInterface{
 	public abstract void add();
 	public abstract void sum();

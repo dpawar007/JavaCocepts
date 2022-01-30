@@ -32,7 +32,7 @@ public class ObjectClassTest {
 		System.out.println(o.toString());
 		
 	 
-		Student s1 = new Student("ratan",111);
+		/*Student s1 = new Student("ratan",111);
 		//below two lines are same
 		System.out.println(s1);
 		//student class toString() executed
@@ -42,7 +42,23 @@ public class ObjectClassTest {
 		System.out.println(s2);
 		//student class toString() executed
 		System.out.println(s2.toString()); //student class toString() executed
+*/		
+		Student s1=new Student("vijayabhaskar",101);
+		Student s2=new Student("bhaskar",102);
+		Student s3=new Student("vijayabhaskar",101);
 		
+		System.out.println(s1.equals(s2));
+		System.out.println(s2.equals(s3));
+		System.out.println(s1.equals(s3));
+		
+		String ram = "ram";
+		String ram1 = new String("ram");
+		
+		System.out.println(ram == ram1);
+		System.out.println(ram1.equals(ram1));
+		
+		System.out.println(ram.getClass());
+		System.out.println(ram.getClass().getName());
 	}
 
 }
