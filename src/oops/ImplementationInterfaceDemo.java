@@ -1,5 +1,5 @@
 package oops;
 
-public class ImplementationInterfaceDemo  implements InterfaceDemo {
+public class ImplementationInterfaceDemo {
 	
 }
