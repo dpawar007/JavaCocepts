@@ -11,6 +11,9 @@ class Display {
 			System.out.println(name);
 		}
 	}
+	public void disp() {
+		System.out.println("Hello : "+Thread.currentThread().getName());
+	}
 }
 
 class MyThread2 extends Thread {
@@ -23,16 +26,16 @@ class MyThread2 extends Thread {
 	}
 
 	public void run() {
-		d.wish(name);
+		d.wish(name);		 
 	}
 }
 
 public class SynchronizedDemo {
 
 	public static void main(String[] args) {
-		Display d1=new Display();
-		MyThread2 t1=new MyThread2(d1,"dhoni");
-		MyThread2 t2=new MyThread2(d1,"yuvaraj");
+		Display d1 = new Display();
+		MyThread2 t1 = new MyThread2(d1, "dhoni");
+		MyThread2 t2 = new MyThread2(d1, "yuvaraj");
 		t1.start();
 		t2.start();
 	}

@@ -1,20 +1,16 @@
 package multithreding;
 
-
-class A
-{
-	public synchronized void foo(B b)
-	{
+class A {
+	public synchronized void foo(B b) {
 		System.out.println("Thread1 starts execution of foo()method");
-		try
-		{
+		try {
 			Thread.sleep(2000);
+		} catch (InterruptedException e) {
 		}
-		catch (InterruptedException e){}
 		System.out.println("Thread1 trying to call b.last()");
 		b.last();
 	}
-	
+
 	public synchronized void last() {
 		System.out.println("inside A, this is last()method");
 	}
@@ -36,11 +32,11 @@ class B {
 	}
 }
 
-public class DeadLock implements Runnable {
+public class DeadLockDemo implements Runnable {
 	A a = new A();
 	B b = new B();
 
-	DeadLock() {
+	DeadLockDemo() {
 		Thread t = new Thread(this);
 		t.start();
 		a.foo(b);// main thread
@@ -49,8 +45,9 @@ public class DeadLock implements Runnable {
 	public void run() {
 		b.bar(a);// child thread
 	}
+
 	public static void main(String[] args) {
-		new DeadLock();//main thread
+		new DeadLockDemo();// main thread
 
 	}
 

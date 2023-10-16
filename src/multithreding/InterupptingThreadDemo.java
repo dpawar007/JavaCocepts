@@ -1,11 +1,12 @@
 package multithreding;
 
-class MyThread1 extends Thread {
+class Interuppt extends Thread {
+	@Override
 	public void run() {
 		try {
 			for (int i = 0; i < 5; i++) {
 				System.out.println("i am lazy Thread :" + i);
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			}
 		} catch (InterruptedException e) {
 			System.out.println("i got interrupted");
@@ -13,11 +14,14 @@ class MyThread1 extends Thread {
 	}
 }
 
-public class IntreptingThread {
+public class InterupptingThreadDemo {
+
 	public static void main(String[] args) {
-		MyThread t = new MyThread();
+		Interuppt t = new Interuppt();
 		t.start();
-	    t.interrupt();   // --->1
+		t.interrupt();  
 		System.out.println("end of main thread");
+
 	}
+
 }
