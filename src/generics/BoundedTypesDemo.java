@@ -1,6 +1,6 @@
 package generics;
 
-class Test <T extends Number&Runnable>{
+class Test <T extends String&Runnable&Cloneable>{
 
 }
 

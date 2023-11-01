@@ -25,22 +25,22 @@ public class CallableFutureDemo {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
-		 
-		MyCallable[] jobs = {
-				new MyCallable(10),
-				new MyCallable(20),
-				new MyCallable(30),
+
+		MyCallable[] jobs = { 
+				new MyCallable(10), 
+				new MyCallable(20), 
+				new MyCallable(30), 
 				new MyCallable(40),
-				new MyCallable(50),
-				new MyCallable(60)
-		};
-		
+				new MyCallable(50), 
+				new MyCallable(60) 
+				};
+
 		ExecutorService service = Executors.newFixedThreadPool(3);// Our Choice
-		for (MyCallable job : jobs) {
+		for (MyCallable job : jobs) {			 
 			service.submit(job);
 		}
-		
- 	service.shutdown();
+
+		service.shutdown();
 	}
 
 }

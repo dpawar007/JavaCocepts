@@ -13,9 +13,9 @@ will be terminated.
 class MyThread4 extends Thread {
 	public void run() {
 		for (int i = 0; i < 10; i++) {
-			System.out.println("lazy thread");
+			System.out.println("lazy thread");			
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 			}
 		}
@@ -27,6 +27,8 @@ public class DaemonThreadDemo {
 			MyThread4 t=new MyThread4();
 			t.setDaemon(true);//-->1
 			t.start();
+			Thread.currentThread().stop();
+			System.out.println("isDeamon Check : "+t.isDaemon());
 			System.out.println("end of main Thread");
 			}
 	}
