@@ -1,0 +1,9 @@
+#ObjecttoPropFile
+#Thu Nov 02 16:29:04 IST 2023
+vinod=vinod@123
+Dhurala=dhur@123
+password=dipak@321
+kiran=kiran@123
+dipak=diapk@123
+vijay=vijay@123
+username=dipak
