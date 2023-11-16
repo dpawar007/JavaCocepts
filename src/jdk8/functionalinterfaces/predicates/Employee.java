@@ -46,7 +46,7 @@ public class Employee {
 	@Override
 	public boolean equals(Object obj) {
 		 Employee e = (Employee) obj;
-		 if(name.equals(e.name) && city.equals(e.city) && salary = = e.salary && designaton.equals(e.designaton)) {
+		 if(name.equals(e.name) && city.equals(e.city) && salary == e.salary && designaton.equals(e.designaton)) {
 			 return true;
 		 }else {
 			 return false;
